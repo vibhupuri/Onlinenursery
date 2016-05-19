@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Logindetails" Member="Logindetails">
+    <Type Name="Logindetail">
+      <Column Name="user_id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="utype" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Registration" Member="Registrations">
+    <Type Name="Registration">
+      <Column Name="user_id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="age" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="contactno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Events" Member="Events">
+    <Type Name="Event">
+      <Column Name="EventId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EventName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Organizer" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Venue" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Time" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Feedback" Member="Feedbacks">
+    <Type Name="Feedback">
+      <Column Name="FId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Time" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Gardner_Reg" Member="Gardner_Regs">
+    <Type Name="Gardner_Reg">
+      <Column Name="GardnerId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GardnerName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactNo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IdProof" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PreferredLocation" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="GardeningExperience" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="JobType" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PaymentAmount" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Time" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Msg_Detail" Member="Msg_Details">
+    <Type Name="Msg_Detail">
+      <Column Name="MsgId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[To]" Member="To" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Time" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProductImg" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProductDesc" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProductType" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="OriginalPrice" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Price" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Discount" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="VendorName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Contact" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Time" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Rating" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Feedback" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vendor_reg" Member="Vendor_regs">
+    <Type Name="Vendor_reg">
+      <Column Name="VId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ShopRegName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactNo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactEmail" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Pincode" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ShopIdProof" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProductDetail" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="secques" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="secans" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="VendorName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Compose" Member="Composes">
+    <Type Name="Compose">
+      <Column Name="composeId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[to]" Member="to" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="[from]" Member="from" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="msg" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="subject" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="date" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="time" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
