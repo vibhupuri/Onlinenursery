@@ -24,7 +24,7 @@ public partial class GardnerRegistration : System.Web.UI.Page
 
         else
         {
-
+            int gid = 1;
             string path, name, cno, add, loc, exp, jobtyp, amnt;  
             name = TextBox1.Text.Trim();
             cno = TextBox2.Text.Trim();
